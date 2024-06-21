@@ -43,7 +43,10 @@ jobs:
         run: sudo apt-get install -y postgresql-client
 
       - name: Set up database schema
-        run: psql $DATABASE_URL -f sql/tables
+        run: |
+          for file in sql/tables/*.sql; do
+            psql $DATABASE_URL -f "$file"
+          done
 
       - name: Insert sample data
         run: psql $DATABASE_URL -f sql/data.sql
