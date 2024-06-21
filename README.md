@@ -5,4 +5,4 @@ data insertion, and verification processes.
 Adjust the SQL scripts and workflow steps as needed for your specific use case.
 
 
---ChatGPT
+Basically het maakt een tabel in een database, zet data erin en dan verifieert alles met een select *
